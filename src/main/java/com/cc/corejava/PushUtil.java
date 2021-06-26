@@ -33,8 +33,8 @@ public class PushUtil {
         json.put("data", dataJson);
 
         System.out.println("json:" + json);
-        String res = NetUtils.getNetData(url, "POST", json.toString());
-        System.out.println("res:" + res);
+       // String res = NetUtils.getNetData(url, "POST", json.toString());
+      //  System.out.println("res:" + res);
     }
 
     private JSONObject getValue(String value) {
