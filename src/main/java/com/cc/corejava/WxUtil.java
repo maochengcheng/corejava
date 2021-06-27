@@ -7,7 +7,7 @@ import java.io.IOException;
 
 public class WxUtil {
     public String weixinToken() throws IOException {
-        String url = "https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&appid=" + appid + "&secret="
+        /*String url = "https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&appid=" + appid + "&secret="
                 + secret;
         System.out.println("weixinToken_url:" + url);
         String res = NetUtils.getNetData(url, "GET", "");
@@ -26,7 +26,7 @@ public class WxUtil {
 
 
             e2.printStackTrace();
-        }
+        }*/
         return null;
     }
 
