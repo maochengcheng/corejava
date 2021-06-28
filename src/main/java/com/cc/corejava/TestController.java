@@ -19,6 +19,9 @@ public class TestController {
 
         JSONObject jb = new JSONObject();
         jb.put("name","maochengcheng");
+        WxUtil wxUtil = new WxUtil();
+        String access_token = wxUtil.weixinToken();
+        jb.put("access_token",access_token);
         return  jb;
     }
 }

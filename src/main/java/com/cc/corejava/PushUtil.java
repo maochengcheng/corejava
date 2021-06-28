@@ -10,7 +10,7 @@ public class PushUtil {
      * @param access_token
      * @param appid
      */
-    private void sendTemplate(String access_token, String appid) {
+    private void sendTemplate(String access_token, String appid) throws Exception {
         // TODO Auto-generated method stub
         String url = "https://api.weixin.qq.com/cgi-bin/message/template/send?access_token=" + access_token;
         System.out.println("url:" + url);
@@ -33,7 +33,9 @@ public class PushUtil {
         json.put("data", dataJson);
 
         System.out.println("json:" + json);
-       // String res = NetUtils.getNetData(url, "POST", json.toString());
+      //  String res = NetUtils.getNetData(url, "POST", json.toString());
+        String res = HttpUtil.doPost(url,json.toString());
+        System.out.println("res:"+res);
       //  System.out.println("res:" + res);
     }
 
