@@ -1,4 +1,4 @@
-package com.cc.corejava;
+package com.cc.corejava.util;
 
 import com.alibaba.fastjson.JSONObject;
 
