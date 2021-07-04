@@ -1,6 +1,0 @@
-# 微信公众号配置
-wx:
-  appid: 11111
-  secret: 22222
-  token: 33333
-  aeskey: 44444

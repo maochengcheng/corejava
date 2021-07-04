@@ -3,13 +3,15 @@ package com.cc.corejava;
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONException;
 import com.alibaba.fastjson.JSONObject;
+import org.springframework.beans.factory.annotation.Autowired;
 
 public class WxUtil {
-    String appid="wxb089827d6c73de66";
-    String secret="370715f07c78a04f4b881d51e01cbcd1";
+    @Autowired
+    private MyConfig myConfig;
+
     public String weixinToken() {
-        String url = "https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&appid=" + appid + "&secret="
-                + secret;
+        String url = "https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&appid=" + myConfig.getAppid() + "&secret="
+                + myConfig.getSecret();
         System.out.println("weixinToken_url:" + url);
         String res = HttpUtil.doGet(url);
         System.out.println("weixinToken_res:" + res);
